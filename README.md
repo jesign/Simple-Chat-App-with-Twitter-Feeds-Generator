@@ -1,4 +1,4 @@
-# chat-rooms-with-covid-tracker
+# Chat rooms with Twitter Feeds related to #Covid19
 
 > My well-made Nuxt.js project
 
