@@ -1,6 +1,16 @@
 # Chat rooms with Twitter Feeds related to #Covid19
 
-> My well-made Nuxt.js project
+A simple chat app created using NuxtJS and Socket IO. 
+
+It include Rooms with different Channels where people will be sending messages. 
+
+It also includes Twitter Feeds Generator - this will fetch tweets from Twitter filtered by the given hashtag (in my case -#Covid19) and send it Covid Twitter Channel. 
+
+Library used:
+- [NuxtJS](https://nuxtjs.org/)
+- [ExpressJs](https://expressjs.com/)
+- [Nuxt Socket IO](https://www.npmjs.com/package/nuxt-socket-io)
+- [Twitter for NodeJS](https://www.npmjs.com/package/twitter)
 
 ## Build Setup
 
@@ -22,5 +32,3 @@ $ yarn generate
 Simply copy .env.example to a new .env file then add your twitter api credentials
 
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
