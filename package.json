@@ -1,0 +1,34 @@
+{
+  "name": "covid-19-chat-app",
+  "version": "1.0.0",
+  "description": "My well-made Nuxt.js project",
+  "author": "jesign",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "dev:server": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.10.3",
+    "bcryptjs": "^2.4.3",
+    "express-validator": "^6.5.0",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.15",
+    "net": "^1.0.2",
+    "nuxt": "^2.0.0",
+    "nuxt-socket-io": "^1.0.25",
+    "tls": "0.0.1",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "fs-extra": "^9.0.0"
+  }
+}
