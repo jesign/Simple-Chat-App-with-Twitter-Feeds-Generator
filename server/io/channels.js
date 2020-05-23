@@ -3,6 +3,21 @@ import TwitterService from '../../services/twitter'
 
 export default function Svc(socket, io) {
     const channelSvc = Object.freeze({
+        sendMessageFromTwitter(message){
+            console.log('sending Message from Twitter:', message)
+            let msg = {
+                inputMsg: message,
+                username: 'Twitter'
+            }
+
+            const namespace = getCovidChannelNamespace()
+            let channelInfo = getChannel('Covid', 'twitter')
+            channelInfo.chats.push(msg)
+
+            socket.to(namespace).emit('newMessage', msg)
+
+            return Promise.resolve(msg)
+        },
         addMessage({ inputMsg, namespace, room, channel, username }) {
             console.log('io message', inputMsg, namespace)
             let msg = {
@@ -110,3 +125,4 @@ export default function Svc(socket, io) {
 
     return channelSvc
 }
+

@@ -27,7 +27,7 @@ Object.entries(rooms).forEach(([room, roomInfo]) => {
     })
 })
 
-export default function Svc(socket, io) {
+const RoomService = function Svc(socket, io) {
     const roomSvc =  Object.freeze({
         getRooms() {
             return Promise.resolve(Object.keys(rooms))
@@ -83,6 +83,8 @@ export default function Svc(socket, io) {
     return roomSvc
 }
 
+export default RoomService;
+
 export function getRoom(room) {
     const fndRoom = rooms[room]
     if (fndRoom === undefined) {
@@ -105,4 +107,8 @@ export function getChannel(room, channel) {
 
 export function getCovidChannelNamespace(room, channel) {
     return 'rooms/Covid/twitter'
+}
+
+export function testing(){
+    return RoomService
 }

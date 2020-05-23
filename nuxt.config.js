@@ -67,6 +67,7 @@ module.exports = {
                     },
                     '/channels': {
                         emitters: [
+                            'getRealTimeTweets',
                             'joinChannel + joinMsg --> channelInfo',
                             'leaveChannel + leaveMsg',
                             'addMessage + msgObject --> msgRxd [appendChats',
@@ -100,6 +101,7 @@ module.exports = {
     },
     
     serverMiddleware: [
-        '~/api/index.js'
+        '~/api/index.js',
+        '~/twitter/stream.js'
     ]
 }

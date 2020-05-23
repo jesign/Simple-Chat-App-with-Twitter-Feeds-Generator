@@ -35,7 +35,7 @@
                 </v-card>
             </v-col>
             <v-col cols="8">
-                <v-card min-height="400" class="message-card">
+                <v-card class="message-card">
                     <v-card-text>
                         <v-alert dense v-for="(chat, i) in channelInfo.chats" :key="i">
                             {{chat.inputMsg}}
@@ -76,11 +76,12 @@ export default {
                 return;
 
             this.roomChanged(newValue);
+            this.channelInfo = {}
         },
         selectedChannel(newChannel, oldChannel){
             if(oldChannel){
                 this.leaveMsg = { room: this.selectedRoom, channel: oldChannel, username: this.username }
-                this.leaveChannel()
+                this.leaveChannel().catch()
             }
             
             if(newChannel){
@@ -132,11 +133,13 @@ export default {
 	},
 	mounted(){
         this.socket = this.$nuxtSocket({ channel: '/channels' })
+        this.getRealTimeTweets()
 	}
 }
 </script>
 <style>
-    .message-card {
-        overflow:scroll
+    .message-card .v-card__text{
+        overflow:scroll;
+        height: 500px;
     }
 </style>
