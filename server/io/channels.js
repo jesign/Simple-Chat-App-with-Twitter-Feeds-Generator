@@ -4,7 +4,6 @@ import TwitterService from '../../services/twitter'
 export default function Svc(socket, io) {
     const channelSvc = Object.freeze({
         sendMessageFromTwitter(message){
-            console.log('sending Message from Twitter:', message)
             let msg = {
                 inputMsg: message,
                 username: 'Twitter'

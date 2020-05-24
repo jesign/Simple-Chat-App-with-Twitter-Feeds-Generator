@@ -102,6 +102,6 @@ module.exports = {
     
     serverMiddleware: [
         '~/api/index.js',
-        '~/twitter/stream.js'
+        // '~/twitter/stream.js'
     ]
 }
