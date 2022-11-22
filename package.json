@@ -19,7 +19,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.15",
     "net": "^1.0.2",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "nuxt-socket-io": "^1.0.25",
     "socket.io": "^2.3.0",
     "tls": "0.0.1",
